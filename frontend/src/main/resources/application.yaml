@@ -1,0 +1,18 @@
+spring:
+  freemarker:
+    template-loader-path:
+      - classpath:/WEB-CONTENT/
+    cache: true
+    suffix: .html
+  resources:
+    chain:
+      cache: true
+      compressed: true
+    static-locations:
+      - classpath:/WEB-CONTENT/
+    cache:
+      period: 86400
+  servlet:
+    multipart:
+      max-file-size: 512MB
+      max-request-size: 512MB

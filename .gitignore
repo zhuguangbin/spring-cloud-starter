@@ -1,0 +1,11 @@
+.idea
+*.iml
+*/*.iml
+*/*/*.iml
+*/target/
+*/*/target/*
+logs
+**/dependency-reduced-pom.xml
+application.pid
+application.port
+/frontend/web/package-lock.json

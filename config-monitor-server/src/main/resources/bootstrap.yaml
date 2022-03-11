@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: local,native
+  application:
+    name: config-monitor-server
+  cloud:
+    config:
+      server:
+        prefix: /config
+        bootstrap: on
+        native:
+          search-locations:
+            - file:///opt/ultron/demo-config/
+            - file:///opt/ultron/demo-config/{application}/
+
+---
+spring:
+  profiles:
+    - local
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+

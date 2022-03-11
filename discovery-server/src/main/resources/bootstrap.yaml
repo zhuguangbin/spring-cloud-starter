@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: local
+  application:
+    name: discovery-server
+eureka:
+  server:
+    enable-self-preservation: false
+
+---
+spring:
+  profiles:
+    - local
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8080/eureka
